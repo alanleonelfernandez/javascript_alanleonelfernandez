@@ -22,8 +22,8 @@
     else if(jugadorFavorito == "PELE"){
         alert(jugadorFavorito + ": apodado como el rey del futból, ganadór de 3 mundiales con Brasil");
     }
-    else if(jugadorFavorito == "CRISTIANO" || "RONALDO"){
-        alert(jugadorFavorito + " CR7: Ganador de 5 Champions, 5 balones de oro y maximo anotador de la historia");
+    else if(jugadorFavorito == "CRISTIANO"){
+        alert(jugadorFavorito + " Ronaldo: Ganador de 5 Champions, 5 balones de oro y maximo anotador de la historia");
     }
     else if(jugadorFavorito == "ZIDANE"){
         alert("Zinedine " + jugadorFavorito + ": Mago francés con la pelota, campeón del mundo en el año 1998");
