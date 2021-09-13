@@ -115,28 +115,44 @@ const error = "Lo sentimos, lo que usted ingresó es erroneo"
 
 //Desafio entregable 5 - objetos
 
-
-
-
-
-
-
-
-
-
-//ejemplo
-/* 
-const calcularInflacion = (producto, precioInicial, precioFinal)=>{
-
-        const porcentaje = calcularPorcentaje(precioInicial, precioFianl)
-
-        console.log("El producto aumento" + producto + "aumento un" +)
-    }
-
-const calcularPorcentaje = (precioInicial, precioFinal)=>{
-
-    return (precioFinal*100)/precioInicial + "%"
-
+class Vehiculos{
+	constructor(marca,modelo,precio,motor,stock){
+		this.marca= marca;
+		this.modelo= modelo;
+		this.precio= precio;
+		this.motor= motor;
+		this.stock= stock;
+	}
+	promocion(){
+		let promo = `Aprovecha nuestro descuento especial en ${this.marca} ${this.modelo} version de motor ${this.motor} y llevatelo por solo ${this.precio*0.8} dolares.`;
+		console.log(promo)
+	}
+	compra(){
+		if(this.stock > 0){
+			console.log(`Queda stock disponible para la compra de su proximo ${this.marca}`)
+			this.stock = this.stock -1
+		}
+		else{
+			let error = `No hay stock disponible de ${this.marca} en este momento`
+			console.log(error)
+		}
+	}
 }
 
-calcularInflacion("Yerba", 7,192) */
+const toyota = new Vehiculos("Toyota","Camry",50000,"3.5 V6",3);
+const chevrolet = new Vehiculos("Chevrolet","Camaro",65000,"6.2 V8",8);
+const ford = new Vehiculos("Ford","Mustang",60000,"5.0 V8",5);
+const dodge = new Vehiculos("Dodge","Charger",55000,"5.7 V8",3)
+
+ford.promocion();
+chevrolet.promocion();
+toyota.promocion();
+dodge.promocion();
+ford.compra();
+chevrolet.compra();
+toyota.compra();
+toyota.compra();
+toyota.compra();
+toyota.compra();
+dodge.compra();
+
