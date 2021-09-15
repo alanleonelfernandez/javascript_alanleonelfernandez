@@ -114,7 +114,7 @@ const error = "Lo sentimos, lo que usted ingresó es erroneo"
 */
 
 //Desafio entregable 5 - objetos
-
+/* 
 class Vehiculos{
 	constructor(marca,modelo,precio,motor,stock){
 		this.marca= marca;
@@ -154,5 +154,86 @@ toyota.compra();
 toyota.compra();
 toyota.compra();
 toyota.compra();
-dodge.compra();
+dodge.compra(); */
 
+//Desafio entregable 6 - Arrays
+/* 
+const consecionaria =  [{id: 1, marca: "Toyota",modelo:"Supra GR",precio:70000},
+                        {id: 2, marca: "Ford",modelo:"Mustang GT",precio:65000},
+                        {id: 3, marca: "Chevrolet",modelo:"Camaro ZL1",precio:60000},
+                        {id: 4, marca: "Dodge",modelo:"Charger R/T",precio:67000},
+                        {id: 5, marca: "Dodge",modelo:"Challenger",precio:63000},
+                        {id: 6, marca: "Chevrolet", modelo:"Corvette C8",precio:50000},
+                        {id: 7, marca: "Chevrolet", modelo:"Silverado SS",precio:71000}];
+
+
+class Vehiculo{
+
+    constructor(vehiculo){
+        this.id = vehiculo.id
+        this.marca = vehiculo.marca
+        this.modelo = vehiculo.modelo
+        this.precio = vehiculo.precio
+    }
+}
+
+const peugeot = new Vehiculo({id:8,marca:"Ford",modelo:"Focus ST",precio:62000})
+consecionaria.push(peugeot)
+
+const carrito = []
+
+const comprar = (modeloVehiculo) =>{
+
+        let vehiculo = consecionaria.find(vehiculo => vehiculo.modelo == modeloVehiculo )
+        if(vehiculo){
+            carrito.push(vehiculo)
+        }else{
+            console.log("Vehiculo no disponible en stock")
+        }
+} 
+comprar("Mustang GT")
+
+console.log(carrito)
+
+const buscarMarca = (marcaVehiculo)=>{
+
+    const busqueda = consecionaria.filter(vehiculo => vehiculo.marca === marcaVehiculo)
+    console.log(busqueda)
+}
+buscarMarca("Chevrolet");
+
+//Desafio complementario 6 - orden de Arrays con sort
+
+consecionaria.sort((a,b) =>{
+    if(a.precio < b.precio){
+        return -1;
+    }
+    if(a.precio > b.precio){
+        return 1;
+    }
+    return 0;
+});
+console.log(consecionaria)
+
+consecionaria.sort((a,b) =>{
+    if(a.modelo < b.modelo){
+        return -1;
+    }
+    if(a.modelo > b.modelo){
+        return 1;
+    }
+    return 0;
+});
+console.log(consecionaria)
+
+consecionaria.sort((a,b) =>{
+    if(a.marca < b.marca){
+        return -1;
+    }
+    if(a.marca > b.marca){
+        return 1;
+    }
+    return 0;
+});
+console.log(consecionaria)
+ */
